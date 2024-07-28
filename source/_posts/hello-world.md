@@ -32,8 +32,8 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ### Deploy to remote sites
 
 ``` bash
-$ git commit -am "Update configuration"
+$ git commit -am "Update contents"
 $ git push -u origin main
 ```
 
-More info: [Deployment](https://hexo.io/zh-cn/docs/github-pages.html)
+More info: [Deployment](https://hexo.io/docs/github-pages.html)
