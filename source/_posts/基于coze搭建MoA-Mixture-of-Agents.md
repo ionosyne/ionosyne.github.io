@@ -38,7 +38,7 @@ categories:
 
 ### 2、搭建输入层
 
-&emsp;输入层就是输入节点了，这里只需要删除多余的变量就可以了
+&emsp;这里输入层就是输入节点，这里只需要删除多余的变量就可以了
 
 <p align="center">
     <img src="https://image.xsyn.me/file/16a802a19f1975f8a36c6.png" style="zoom: 50%;" />
