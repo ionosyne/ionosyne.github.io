@@ -64,8 +64,11 @@ categories:
 &emsp;&emsp;提示词采用的是文章里的提示词，如下所示：
 
 ```prompt
-You have been provided with a set of responses from various open-source models to the latest user query. Your task is to synthesize these responses into a single, high-quality response. It is crucial to critically evaluate the information provided in these responses, recognizing that some of it may be biased or incorrect. Your response should not simply replicate the given answers but should offer a refined, accurate, and comprehensive reply to the instruction. Ensure your response is well-structured, coherent, and adheres to the highest standards of accuracy and reliability.
-
+You have been provided with a set of responses from various open-source models to the latest user query. 
+Your task is to synthesize these responses into a single, high-quality response. 
+It is crucial to critically evaluate the information provided in these responses, recognizing that some of it may be biased or incorrect. 
+Your response should not simply replicate the given answers but should offer a refined, accurate, and comprehensive reply to the instruction. 
+Ensure your response is well-structured, coherent, and adheres to the highest standards of accuracy and reliability.
 
 Question:
 {{input}}
@@ -77,7 +80,7 @@ Responses from models:
 
 ### 5、搭建输出层
 
-&emsp;&emsp;输出层就是输出节点了，直接把协作层的结果作为输出就可以了。
+&emsp;&emsp;输出层就是输出节点，直接把协作层的结果设置为输出就可以了。
 
 <p align="center">
     <img src="https://image.xsyn.me/file/cb4aeee119c6021b9037e.png" style="zoom:50%;" />
@@ -89,15 +92,15 @@ Responses from models:
 &emsp;&emsp;把所有模型块都连起来，整个工作流就完成了。这个工作流可以直接在界面上调试，也可以集成到自己的机器人里用来聊天。
 
 <p align="center">
-<img src="https://image.xsyn.me/file/438b1091cfab1687680fe.png" style="zoom:50%;" />
+    <img src="https://image.xsyn.me/file/438b1091cfab1687680fe.png" style="zoom:50%;" />
 </p>
 
 ## 四、模型测试
 
-&emsp;&emsp;模型测试直接在工作流中试运行。测试问题是：3.11为什么大于3.9？问题比较简单，MoA成功答对了。但整体运行耗时13s，这应该是MoA最大的缺点了吧。
+&emsp;&emsp;模型测试使用的是工作流的试运行。测试问题是：3.11为什么大于3.9？问题比较简单，MoA成功答对了。但整体运行耗时13s，这应该是MoA最大的缺点了吧。
 
 <p align="center">
-<img src="https://image.xsyn.me/file/4a338e26081353ef7aa5b.png" style="zoom:50%;" />
+    <img src="https://image.xsyn.me/file/4a338e26081353ef7aa5b.png" style="zoom:50%;" />
 </p>
 
 ## 五、总结
