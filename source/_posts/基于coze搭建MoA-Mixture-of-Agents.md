@@ -1,5 +1,5 @@
 ---
-title: 基于coze搭建MoA(Mixture-of-Agents)
+title: 基于Coze搭建MoA(Mixture-of-Agents)
 date: 2024-07-29 20:41:16
 description: 利用Coze里的国产大模型结合Coze工作流搭建MoA(Mixture-of-Agents)
 tags: [AI, Coze]
