@@ -61,26 +61,14 @@ categories:
 </p>
 
 
-&emsp;&emsp;提示词采用的是文章里的提示词，如下所示：
+&emsp;&emsp;协作层的提示词在文章里提示词的基础上，把原始输入也加了上去：
 
-```prompt
-You have been provided with a set of responses from various open-source models to the latest user query. 
-Your task is to synthesize these responses into a single, high-quality response. 
-It is crucial to critically evaluate the information provided in these responses, recognizing that some of it may be biased or incorrect. 
-Your response should not simply replicate the given answers but should offer a refined, accurate, and comprehensive reply to the instruction. 
-Ensure your response is well-structured, coherent, and adheres to the highest standards of accuracy and reliability.
-
-Question:
-{{input}}
-Responses from models:
-1.{{input1}}
-2.{{input2}}
-3.{{input3}}
-```
+| You have been provided with a set of responses from various open-source models to the latest user query. Your task is to synthesize these responses into a single, high-quality response. It is crucial to critically evaluate the information provided in these responses, recognizing that some of it may be biased or incorrect. Your response should not simply replicate the given answers but should offer a refined, accurate, and comprehensive reply to the instruction. Ensure your response is well-structured, coherent, and adheres to the highest standards of accuracy and reliability.<br/><br/>Question:<br/>input<br/>Responses from models:<br/>1.input1<br/>2.input2<br/>3.input3 |
+| ------------------------------------------------------------ |
 
 ### 5、搭建输出层
 
-&emsp;&emsp;输出层就是输出节点，直接把协作层的结果设置为输出就可以了。
+&emsp;&emsp;输出层就是输出节点，这里设置协作层的结果直接作为输出。
 
 <p align="center">
     <img src="https://image.xsyn.me/file/cb4aeee119c6021b9037e.png" style="zoom:50%;" />
@@ -95,14 +83,12 @@ Responses from models:
     <img src="https://image.xsyn.me/file/438b1091cfab1687680fe.png" style="zoom:50%;" />
 </p>
 
-## 四、模型测试
-
-&emsp;&emsp;模型测试使用的是工作流的试运行。测试问题是：3.11为什么大于3.9？问题比较简单，MoA成功答对了。但整体运行耗时13s，这应该是MoA最大的缺点了吧。
+&emsp;&emsp;这里简单测试一下。测试问题是：3.11为什么大于3.9？问题比较简单，MoA成功答对了，但整体运行耗时11s。运行速度可能是MoA最大的缺点了吧。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/4a338e26081353ef7aa5b.png" style="zoom:50%;" />
+    <img src="https://image.xsyn.me/file/b3ad058b95e305ffbac66.png" style="zoom:50%;" />
 </p>
 
-## 五、总结
+## 四、总结
 
-&emsp;&emsp;总体用下来MoA的实际体验感一般，毕竟一个问题如果所有模型都答不对的话，结果自然也是错的，模型能力提升并不显著。不过MoA确实是一种可玩性很高的大模型玩法。相比单独的模型，MoA的输出会生动很多，不同大模型组合确实会碰撞出不一样的火花。大家感兴趣的话也可以自己去搭建一下MoA，调一调模型配方和提示词，有一些意外收获也说不定。
+&emsp;&emsp;实际用下来MoA的体验感一般，毕竟一个问题如果所有模型都答不对的话，结果自然也是错的，模型能力并不会有很大提升。不过相比单独的模型，MoA的输出会生动很多。大家感兴趣的话也可以自己去搭建一下MoA，MoA确实是一种可玩性很高的大模型玩法，调一调模型配方和提示词，不同大模型组合也许会碰撞出不一样的火花。
