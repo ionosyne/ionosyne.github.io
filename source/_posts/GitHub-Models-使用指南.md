@@ -13,7 +13,7 @@ categories:
 
 ## 二、模型调用
 
-&emsp;&emsp;GitHub Models提供了Playground 进行调试，当然也可以直接使用API。例如使用cURL请求
+&emsp;&emsp;GitHub Models提供了Playground 进行调试，当然也可以直接使用API。例如使用cURL请求:
 
 ```bash
 curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
