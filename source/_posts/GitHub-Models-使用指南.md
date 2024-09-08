@@ -73,6 +73,7 @@ async function handleRequest(request) {
 &emsp;&emsp;因为已经集成到one-api了，所以可以很方便的在各种AI应用中调试，例如在open-webui里使用：
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/bc259630485d22c0adc35.png" style="zoom:80%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd8073bd80e.png" style="zoom:80%;" />
 </p>
+
 &emsp;&emsp;响应速度还是挺快的，不过和官方模型用起来有些差异，应该是版本有些不同。最后是模型使用限制，GPT-4o免费用户上下文限制到了8k，每分钟请求最大为10，每天最多请求50次。用来测试应用的话应该是够用的。

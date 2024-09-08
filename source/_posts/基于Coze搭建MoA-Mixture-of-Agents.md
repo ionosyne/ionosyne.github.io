@@ -21,8 +21,9 @@ categories:
 - **输出层**：最终的回答或输出在这一层生成，并返回给用户或下游应用。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/a53ea1ca9dad49df8964c.png" style="zoom:80%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7ec6b2400.png" style="zoom:80%;" />
 </p>
+
 
 &emsp;&emsp;MoA的核心在于处理层和协作层的构建。其中处理层的模型应该具备多样性，能够从不同的角度生成答案，一般会选择能力较弱的模型。协作层的模型需要具备强大的综合和优化能力，能够有效地汇总和分析来自处理层的多个回答。
 
@@ -33,32 +34,36 @@ categories:
 &emsp;&emsp;进入Coze主页后依次点击 个人空间→工作流→创建工作流 就可以创建一个新的工作流了。新工作流会包含一个开始节点和一个结束节点，对应模型的输入和输出。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/c8913bc0a5cea630770c9.png"  style="zoom: 80%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7f0134095.png"  style="zoom: 80%;" />
 </p>
+
 
 ### 2、搭建输入层
 
-&emsp;这里输入层就是输入节点，这里只需要删除多余的变量就可以了
+&emsp;输入层对应输入节点，这里需要删除多余的变量，如下图所示
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/16a802a19f1975f8a36c6.png" style="zoom: 50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7f1f21b6a.png" style="zoom: 50%;" />
 </p>
+
 
 ### 3、搭建处理层
 
 &emsp;&emsp;这一层的搭建需要点击左边的大模型加号生成新的大模型块，每一块代表一个代理模型。Coze目前可以选择的模型有Baichuan4、GLM-4、MiniMax、Kimi、豆包和通义千问，可以任选几个作为处理层模型。注意这里需要将大模型的块与输入块相连，并定义输入参数。提示词可以直接使用用户输入，当然为了提升模型能力，也可以自己加一些提示词。这里我使用通义千问-8k、MiniMax-8k和Kimi-8k作为代理模型。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/45703d6e05ba28ba84d68.png" style="zoom:50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7f6c76d59.png" style="zoom:50%;" />
 </p>
+
 
 ### 4、搭建协作层
 
 &emsp;&emsp;这一层也是采用大模型块，但只有一个模型，这里我选择豆包-fc-32k模型作为协作模型。需要注意的是要把该模型块与上一层模型全部相连，并定义好前面每个模型的输出对应的变量。这里我还额外添加了用户输入作为变量。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/260e2c51ffe3162b65120.png" style="zoom:50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7f95c6393.png" style="zoom:50%;" />
 </p>
+
 
 
 &emsp;&emsp;协作层的提示词在文章里提示词的基础上，把原始输入也加了上去：
@@ -68,11 +73,12 @@ categories:
 
 ### 5、搭建输出层
 
-&emsp;&emsp;输出层就是输出节点，这里设置协作层的结果直接作为输出。
+&emsp;&emsp;输出层对应输出节点，这里将协作层的结果设置作为输出。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/cb4aeee119c6021b9037e.png" style="zoom:50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd7fd243925.png" style="zoom:50%;" />
 </p>
+
 
 
 ### 6、整体工作流
@@ -80,14 +86,16 @@ categories:
 &emsp;&emsp;把所有模型块都连起来，整个工作流就完成了。这个工作流可以直接在界面上调试，也可以集成到自己的机器人里用来聊天。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/438b1091cfab1687680fe.png" style="zoom:50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd800a5c914.png" style="zoom:50%;" />
 </p>
+
 
 &emsp;&emsp;这里简单测试一下。测试问题是：3.11为什么大于3.9？问题比较简单，MoA成功答对了，但整体运行耗时11s。运行速度可能是MoA最大的缺点了吧。
 
 <p align="center">
-    <img src="https://image.xsyn.me/file/b3ad058b95e305ffbac66.png" style="zoom:50%;" />
+    <img src="https://img.xsyn.me/i/2024/09/08/66dd8036ee047.png" style="zoom:50%;" />
 </p>
+
 
 ## 四、总结
 
