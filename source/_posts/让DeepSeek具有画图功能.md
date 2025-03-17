@@ -71,6 +71,6 @@ Make sure the prompts in the URL are encoded. Don't quote the generated markdown
 
 &emsp;&emsp;把上面的提示词作为系统提示词，或者干脆和想要画的图一起发送就可以了。例如我们让DeepSeek画一张自画像：
 <p align="center">
-    <img src="https://img.xsyn.me/i/2025/02/22/67b97a1046c21.png" style="zoom:25%;" />
+    <img src="https://img.311305.xyz/i/2025/02/22/67b97a1046c21.png" style="zoom:25%;" />
 </p>
 &emsp;&emsp;画图调用的是flux模型，效果还是不错的，大家也可以试试画画自己喜欢的图。当然这个提示词没有经过优化，用起来还是有点小bug，自己使用的时候还需要优化一下。

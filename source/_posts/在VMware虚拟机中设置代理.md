@@ -18,14 +18,14 @@ categories:
 &emsp;&emsp;为了虚拟机能访问主机网络，需要配置虚拟机ip和主机ip位于同一网段。最简单的设置方式是将虚拟机的网络设置成桥接模式，这样就不用专门去配置ip地址了。
 
 <p align="center">
-    <img src="https://img.xsyn.me/i/2024/09/08/66dd80acb866f.png" style="zoom:50%;" />
+    <img src="https://img.311305.xyz/i/2024/09/08/66dd80acb866f.png" style="zoom:50%;" />
 </p>
 
 
 &emsp;&emsp;网络设置好以后进入虚拟机。我使用的是centos7，进入之后在右上角的网络设置network-network proxy里面把主机ip和代理端口填进去，就配置好了。
 
 <p align="center">
-    <img src="https://img.xsyn.me/i/2024/09/08/66dd80c4a2462.png" style="zoom:70%;" />
+    <img src="https://img.311305.xyz/i/2024/09/08/66dd80c4a2462.png" style="zoom:70%;" />
 </p>
 
 
@@ -34,7 +34,7 @@ categories:
 &emsp;&emsp;由于只配置了http和socks代理，直接ping还是无法ping通国外ip的，这里用cURL做简单测试：
 
 <p align="center">
-    <img src="https://img.xsyn.me/i/2024/09/08/66dd80d78ab80.png" style="zoom:70%;" />
+    <img src="https://img.311305.xyz/i/2024/09/08/66dd80d78ab80.png" style="zoom:70%;" />
 </p>
 
 
