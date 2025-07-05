@@ -26,7 +26,7 @@ categories:
 &emsp;&emsp;安装之前需要确保本地安装有uv，如果没有就 `pip install uv` 安装一下。最好是安装在系统环境的python下，不然调用的话就需要用绝对路径来调用。安装完成后在cmd中输入`uv`，出现如下页面说明环境没有问题：
 
 <p align="center">
-    <img src="https://img.311305.xyz/i/2025/03/19/67dace9546b1f.png" style="zoom:33%;" />
+    <img src="https://p.iz.mk/i/2025/07/05/6868bb51ee21c.webp" style="zoom:33%;" />
 </p>
 
 &emsp;&emsp;mcp服务最关键的就是其配置文件，例如mcp-server-fetch给的配置文件是这样的
@@ -43,12 +43,12 @@ categories:
 &emsp;&emsp;这个配置很容易理解，主要包括command和args两部分。就是使用uvx（uv自带的）来启动mcp-server-fetch。cherry studio的MCP配置界面是如下所示，和上面的配置文件是对应的。把命令和参数填到对应方框中就好了。有些复杂的MCP可能还需要设置env环境变量，也一一对照填进去就可以了。当然，现在的版本bug很多，配置好了也不保证能启动起来。
 
 <p align="center">
-    <img src="https://img.311305.xyz/i/2025/03/19/67dacb930db17.png" style="zoom:33%;" />
+    <img src="https://p.iz.mk/i/2025/07/05/6868bb86d125f.webp" style="zoom:33%;" />
 </p>
 &emsp;&emsp;然后我们就可以通过对话来调用MCP服务了，MCP的调用格式会自动发送给模型，只要是能力过得去的大模型调用起来都是没有问题的。当然还有一个前提就是模型需要支持function call。
 
 <p align="center">
-    <img src="https://img.311305.xyz/i/2025/03/19/67dad23cf2efc.png" style="zoom:25%;" />
+    <img src="https://p.iz.mk/i/2025/07/05/6868bba8294fe.webp" style="zoom:25%;" />
 </p>
 &emsp;&emsp;我这里使用的是火山的deepseek-r1模型，让其访问一下MCP的github主页。可以看到deepseek-r1成功通过MCP fetch获取并总结了网页的内容。
 
@@ -61,7 +61,7 @@ categories:
 &emsp;&emsp;那么问题来了，怎么把知识库集成到MCP中呢。我这里用了一种取巧的方法，就是利用这个MCP服务：[any-chat-completions-mcp](https://github.com/pyroprompts/any-chat-completions-mcp) 。这个服务可以把支持openai接口的对话模型转化为MCP，一些常用的知识库例如fastgpt、maxkb等都是支持openai接口的，这样大语言模型就可以通过对话获取知识库信息了。cherry studio的配置界面如下，需要注意的是AI_CHAT_NAME这个环境变量既是工具名称，也是工具描述，所以需要体现知识库的功能，这样模型才好去调用。
 
 <p align="center">
-    <img src="https://img.311305.xyz/i/2025/03/21/67dd5d10638fa.png" style="zoom:33%;" />
+    <img src="https://p.iz.mk/i/2025/07/05/6868bbd6754f1.webp" style="zoom:33%;" />
 </p>
 
 &emsp;&emsp;对于这种长文归纳、总结的应用，目前Claude-3.7的效果是最好的，不过即使是Claude-3.7在调用工具的时候也有偷懒的表现。这里我用提示词进一步提升了Claude的调用积极性：
@@ -104,7 +104,7 @@ categories:
 <details> 
 <summary>知识库深度研究</summary>
 <p align="center">
-    <img src="https://img.311305.xyz/i/2025/03/21/67dd5f8f1f1c2.png" style="zoom:25%;" />
+    <img src="https://p.iz.mk/i/2025/07/05/6868bcb12a124.webp" style="zoom:25%;" />
 </p>
 </details>
 
