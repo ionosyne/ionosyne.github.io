@@ -1,5 +1,5 @@
 ---
-title: VPS配置ipv6
+title: VPS ipv6配置过程记录
 date: 2024-11-03 19:16:26
 description: 最近好几个VPS的ipv6都出现了问题，来来回回调节了很久，把配置过程记录一下
 tags: [网络]

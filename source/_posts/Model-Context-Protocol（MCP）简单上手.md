@@ -1,7 +1,7 @@
 ---
 title: Model Context Protocol（MCP）简单上手
 date: 2025-03-17 21:17:07
-description: 这段时间MCP可以说是非常火了，尤其是claude-3.7出来以后，各种agent应用层出不穷，MCP的热度也居高不下。本着热心学习的态度我也决定好好钻研一下。
+description: 这段时间MCP可以说是非常火了，简单学习了一下。
 tags: [AI, MCP, agent]
 categories: 
 - [AI]
