@@ -987,7 +987,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/ionosyne", tip: "GitHub" }
     - { class: "iconfont icon-telegram-fill", link: "https://t.me/iOnosyne", tip: "telegram" }
-    - { class: "iconfont icon-twitter-fill", link: "https://x.com/iOnosyne", tip: "twitter"}
+  #  - { class: "iconfont icon-twitter-fill", link: "https://x.com/iOnosyne", tip: "twitter"}
 
 
 #---------------------------

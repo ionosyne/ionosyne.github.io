@@ -56,13 +56,13 @@ jobs:
 &emsp;&emsp;完成上面的准备工作后，新建一个github仓库，把这个文件上传到`/.github/workflows`文件夹下面，github action就会自动开始编译工作了。测试的镜像编译的很顺利，编译完成后的SIF文件会上传到Artifact，可以通过链接下载。
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/07/07/686bc2b1192c2.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/AFU1JD4QVU1V.png" style="zoom:75%;" />
 </p>
 
 &emsp;&emsp;不过不出意外的话，马上就要出意外了。当我准备编译自己的镜像的时候，发现虚拟环境的空间竟然不够了。额，我的镜像大概10个G，确实大了一点。
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/07/07/686bc5129c9b3.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/H8EZXP4QVU1V.png" style="zoom:75%;" />
 </p>
 
 &emsp;&emsp;那在安装环境之前先清一下空间怎么样，比如这样：
@@ -84,7 +84,7 @@ jobs:
 &emsp;&emsp;这个命令大概可以清理出50G左右的空间：
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/07/07/686bc67a84f79.webp" style="zoom:50%;" />
+    <img src="https://img.311305.xyz/D53XJZ4QVU1V.png" style="zoom:50%;" />
 </p>
 
 &emsp;&emsp;不过还是不行，最后还是报空间不足，看来将docker镜像编译为singularity空间要求太大了，github action只适合小镜像的编译。
@@ -104,13 +104,13 @@ jobs:
 &emsp;&emsp;测试一下编译命令，perfect！！
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/07/07/686bc90228b3e.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/Y33DM64QVU1V.png" style="zoom:75%;" />
 </p>
 
 &emsp;&emsp;然后就是用命令`!apptainer build my_image.sif docker://my_image:latest`编译自己的镜像了，这回总算编译成功了，峰值的时候用掉了大概80G左右的空间，差点又编译失败了。不过Google Colab速度比GitHub Actions慢了不止一点，如果镜像不是很大的话还是优选考虑GitHub Actions。
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/07/07/686bc9cc9b0d9.webp" style="zoom:50%;" />
+    <img src="https://img.311305.xyz/ZQ6Q1B5QVU1V.png" style="zoom:50%;" />
 </p>
 
 &emsp;&emsp;编译完成后的SIF文件会位于colab的文件目录里，直接下的话会很卡，建议挂载自己的google drive然后拷进去。从google drive里面下会顺畅很多。

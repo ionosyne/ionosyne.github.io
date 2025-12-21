@@ -41,7 +41,7 @@ babeldoc --help
 &emsp;&emsp;如果出现下图说明安装成功，如果报错提示babeldoc不是系统命令，可以尝试将`C:\Users\username\Desktop\.local\bin`加入环境变量再运行`babeldoc --help`试试
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/08/03/688f044c46621.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/BMMM5N5QVU1V.png" style="zoom:75%;" />
 </p>
 
 ## 三、BabelDOC配置
@@ -60,7 +60,7 @@ babeldoc --openai --openai-model "glm-4.5" --openai-base-url "https://open.bigmo
 &emsp;&emsp;最后为这个`.bat`文件生成一个**快捷方式**，名称和图标可以自己选，然后把快捷方式放到`%APPDATA%\Microsoft\Windows\SendTo`目录下。放到这个目录下的文件会出现在右键菜单-发送到。我们右键pdf发送到babeldoc，就可以使用上面的bat处理pdf了：
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/08/03/688f06899e10e.webp" style="zoom:33%;" />
+    <img src="https://img.311305.xyz/P5TJ315QVU1V.png" style="zoom:33%;" />
 </p>
 
 ## 四、使用测试
@@ -68,13 +68,13 @@ babeldoc --openai --openai-model "glm-4.5" --openai-base-url "https://open.bigmo
 &emsp;&emsp;这里用一篇`Attention Is All You Need`来进行测试。如果是第一次使用的话babeldoc会下载必要的字体，速度会比较慢。过程中warning也挺多的，直接无视就好。因为我的GLM-4.5并发有点低，而且默认是思考模型，ai翻译花了8分钟，还有4分钟用来处理文档，总共花了12分钟和50W token。
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/08/03/688f07c50857c.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/5PM0KA6QVU1V.png" style="zoom:75%;" />
 </p>
 
 &emsp;&emsp;翻译成功后会在原目录生成两个文件，一个是英文翻译pdf，一个是中英对照pdf。GLM在翻译这块确实可以，配合上BabelDOC的公式和格式，整体效果可以说赏心悦目：
 
 <p align="center">
-    <img src="https://p.iz.mk/i/2025/08/03/688f08ac580e3.webp" style="zoom:75%;" />
+    <img src="https://img.311305.xyz/86N6GG6QVU1V.png" style="zoom:75%;" />
 </p>
 
 &emsp;&emsp;当然翻译速度还是和机器配置以及api速度挂钩，如果GLM的并发和吐字速度能再高一点的话，整体体验应该会更好。大家感兴趣的话也可以自己去试试配置配置，看看效果如何。
